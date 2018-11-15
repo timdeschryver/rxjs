@@ -123,15 +123,15 @@ export class Subscription implements SubscriptionLike {
   }
 
   /**
-   * Adds a tear down to be called during the unsubscribe() of this
+   * Adds a teardown to be called during the unsubscribe() of this
    * Subscription. Can also be used to add a child subscription.
    *
-   * If the tear down being added is a subscription that is already
+   * If the teardown being added is a subscription that is already
    * unsubscribed, is the same reference `add` is being called on, or is
    * `Subscription.EMPTY`, it will not be added.
    *
-   * If this subscription is already in an `closed` state, the passed
-   * tear down logic will be executed immediately.
+   * If this subscription is already in a `closed` state, the passed
+   * teardown logic will be executed immediately.
    *
    * When a parent subscription is unsubscribed, any child subscriptions that were added to it are also unsubscribed.
    *
